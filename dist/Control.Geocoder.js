@@ -1043,6 +1043,9 @@ module.exports = {
 
 					results.push({
 						name: this._deocodeFeatureName(f),
+						html: this.options.htmlTemplate ?
+							this.options.htmlTemplate(f)
+							: undefined,
 						center: latLng,
 						bbox: bbox,
 						properties: f.properties
